@@ -129,13 +129,3 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-node_modules
-chave_api.txt
-
-mongodb+srv://TJromersonrsantana:on6SKXDbVJNSAu17@cluster0.wx9ay.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-
-TJromersonrsantana
-on6SKXDbVJNSAu17
-
-.env
-
