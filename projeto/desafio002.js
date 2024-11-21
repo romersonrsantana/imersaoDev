@@ -1,4 +1,7 @@
 import express from "express";
+import conectarAoBanco from "../src/config/dbCondig.js";
+
+const conexao = await conectarAoBanco(process.env.STRING_CONEXAO) //todos os dados dessa conexão irão ficar salvos dentro dessa variável.
 
 const posts = [ //dados ´para consumir e devolver por uma rota
     {
@@ -56,6 +59,10 @@ function buscarPostPorID(id) {
     return posts.findIndex((post) => {      //buscar dados em uma estrutura, verifica
         return post.id === Number(id)
     })
+}
+
+async function getTodosPosts() {
+    const db = conexao.db()
 }
 
 app.get("/postes/:id", (req, res) => {
